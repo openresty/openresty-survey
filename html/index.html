@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="OpenResty User Survey">
+    <meta name="author" content="Yichun Zhang (agentzh)">
+    <link rel="icon" href="https://openresty.org/favicon.ico">
+
+    <title>OpenResty User Survey</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/vendor/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/vendor/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">OpenResty User Survey</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="https://openresty.org/">Home</a></li>
+            <li><a href="https://openresty.org/#about">About</a></li>
+            <li><a href="http://openresty.org/#ContactUs">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class="container" id="cnt1">
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-10" id="panel1">
+        <form class="panel panel-default" role="form" action="post" method="post" data-toggle="validator">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <span class="fa fa-question-circle"></span>   User Survey</h3>
+            </div>
+            <div class="panel-body two-col">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                        The OpenResty team will keep the submitted user information confidential unless being
+                        explicitly told otherwise.
+                        </p>
+                        <p>By "OpenResty" we mean either the OpenResty bundle or just core OpenResty components like the <a href="https://github.com/openresty/lua-nginx-module">ngx_lua module</a>.</p>
+                        <p>Fields marked by <span class="required-field">*</span> are required.</p>
+                    </div>
+                </div>
+
+                <hr/>
+
+
+                <div class="row">
+
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="first_name" class="text-label">First Name</label>
+                                <input name="first_name"
+                                       id="first_name"
+                                       placeholder="First Name"
+                                       type="text"
+                                       value="" required pattern="\S+">                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="last_name" class="text-label">Last Name</label>
+                                <input name="last_name"
+                                       id="last_name"
+                                       placeholder="Last Name"
+                                       type="text"
+                                       value="" required pattern="\S+">                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   <!-- row -->
+
+                <div class="row">
+
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="country" class="text-label">Country/Region</label>
+                                <input name="country"
+                                       id="country"
+                                       placeholder="Country/Region"
+                                       type="text"
+                                       value="" required>                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="city" class="text-label">City</label>
+                                <input name="city"
+                                       id="city"
+                                       placeholder="City"
+                                       type="text"
+                                       value="" required>                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   <!-- row -->
+
+                <div class="row">
+
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="email" class="text-label">Email</label>
+                                <input name="email"
+                                       id="email"
+                                       placeholder="Email"
+                                       type="email"
+                                       value="" required>                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="homepage" class="text-label">Home Page</label>
+                                <input name="homepage"
+                                       id="homepage"
+                                       placeholder="Home Page"
+                                       type="url"
+                                       value="">                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   <!-- row -->
+
+                <div class="row">
+
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="github" class="text-label">GitHub ID</label>
+                                <input name="github"
+                                       id="github"
+                                       placeholder="GitHub ID"
+                                       type="text"
+                                       value="" pattern="\w+">                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="twitter" class="text-label">Twitter ID</label>
+                                <input name="twitter"
+                                       id="twitter"
+                                       placeholder="Twitter ID"
+                                       type="text"
+                                       value="" pattern="\w+">                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   <!-- row -->
+
+                <div class="row">
+
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="company" class="text-label">Company</label>
+                                <input name="company"
+                                       id="company"
+                                       placeholder="Company"
+                                       type="text"
+                                       value="">                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="company_url" class="text-label">Company URL</label>
+                                <input name="company_url"
+                                       id="company_url"
+                                       placeholder="Company URL"
+                                       type="url"
+                                       value="">                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   <!-- row -->
+
+                <div class="row">
+
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="job_title" class="text-label">Job Title</label>
+                                <input name="job_title"
+                                       id="job_title"
+                                       placeholder="Job Title"
+                                       type="text"
+                                       value="">                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="department" class="text-label">Department</label>
+                                <input name="department"
+                                       id="department"
+                                       placeholder="Department"
+                                       type="text"
+                                       value="">                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   <!-- row -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-sm">
+                            <div class="input-sm">
+                                <label for="logo" class="text-label-lg">URL to your company's logo image</label>
+                                <input placeholder="URL to your company's logo image" name="logo"
+                                       id="logo"
+                                       type="url" value=""
+                                       class="text-box-lg">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-sm">
+                            <div class="input-sm">
+                                <label for="typical_uses" class="text-label-lg">Typical use cases of OpenResty in your company</label>
+                                <input placeholder="Typical use cases of OpenResty in your company" name="typical_uses"
+                                       id="typical_uses"
+                                       type="text" value=""
+                                       class="text-box-lg">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-sm">
+                            <div class="input-sm">
+                                <label for="dev_count" class="text-label-lg">Number of developers doing OpenResty</label>
+                                <input placeholder="Number of developers doing OpenResty" name="dev_count"
+                                       id="dev_count"
+                                       type="number" value=""
+                                       class="">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-sm">
+                            <div class="input-sm">
+                                <label for="traffic" class="text-label-lg">Approximate traffic through OpenResty</label>
+                                <input placeholder="Approximate traffic through OpenResty" name="traffic"
+                                       id="traffic"
+                                       type="text" value=""
+                                       class="text-box-md">
+                                <span>(per second)</span>                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="checkbox">
+                                <label for="prod">
+                                    <input name="prod" id="prod" type="checkbox" value="1">
+                                    Using OpenResty in production                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="checkbox">
+                                <label for="fun">
+                                    <input name="fun" id="fun" type="checkbox" value="1">
+                                    Using OpenResty for fun                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="checkbox">
+                                <label for="extern">
+                                    <input name="extern" id="extern" type="checkbox" value="1">
+                                    Using OpenResty in your company's external services                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="checkbox">
+                                <label for="intern">
+                                    <input name="intern" id="intern" type="checkbox" value="1">
+                                    Using OpenResty in your company's internal tools                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-sm">
+                            <div class="checkbox">
+                                <label for="show_logo">
+                                    <input name="show_logo" id="show_logo" type="checkbox" value="1">
+                                    Want to show your company's logo on the "Who are using OpenResty" page of the <a href="https://openresty.org">OpenResty official site</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-sm">
+                            <div class="checkbox">
+                                <label for="subscribed">
+                                    <input name="subscribed" id="subscribed" type="checkbox" value="1">
+                                    Already subscribed to the <a href="https://groups.google.com/group/openresty-en/">openresty-en mailing list</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well well-sm">
+                            <div class="checkbox">
+                                <label for="will_tell">
+                                    <input name="will_tell" id="will_tell" type="checkbox" value="1">
+                                    Will tell other people about OpenResty
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-success btn-sm btn-block">
+                            <span class="fa fa-send"></span>Submit</button>
+                    </div>
+                    <!--
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary btn-sm btn-block">
+                            View Result</button>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/vendor/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/vendor/validator.min.js"></script>
+  </body>
+</html>

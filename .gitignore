@@ -1,0 +1,8 @@
+*~
+*.swp
+*.swo
+*.bak
+*.pid
+*.log
+go
+upload

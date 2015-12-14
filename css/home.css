@@ -1,0 +1,60 @@
+#cnt1 {
+    /* background-color: rgba(215, 212, 212, 0.88); */
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+
+#panel1 {
+    padding:20px;
+}
+
+.panel-body:not(.two-col) {
+    padding: 0px;
+}
+
+.panel-body .radio, .panel-body .checkbox {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.panel-body .list-group {
+    margin-bottom: 0;
+}
+
+.margin-bottom-none {
+    margin-bottom: 0;
+}
+
+.text-box-md {
+    width: 20em;
+}
+
+.text-box-lg {
+    width: 33em;
+}
+
+.text-label {
+    display: inline-block;
+    width: 8em;
+}
+
+.text-label-lg {
+    display: inline-block;
+    width: 24em;
+}
+
+.success-icon {
+    color: green;
+    padding: 10px;
+    font-size: 110%;
+}
+
+.fail-icon {
+    color: red;
+    padding: 10px;
+    font-size: 110%;
+}
+
+.required-field {
+    color: red;
+}
