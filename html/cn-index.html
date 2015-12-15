@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <!-- This file was automatically generated from template/index.tt. -->
+<!DOCTYPE html><html lang="en">
+  <!-- This file was automatically generated from template/cn-index.tt. -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="OpenResty User Survey">
-    <meta name="author" content="Yichun Zhang (agentzh)">
+    <meta name="description" content="OpenResty 用户调查">
+    <meta name="author" content="章亦春 (agentzh)">
     <link rel="icon" href="https://openresty.org/favicon.ico">
 
     <title>OpenResty User Survey</title>
@@ -20,7 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/home.css" rel="stylesheet">
+    <link href="css/cn-home.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -44,13 +43,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">OpenResty User Survey</a>
+          <a class="navbar-brand" href="#">OpenResty 用户调查</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="https://openresty.org/">Home</a></li>
-            <li><a href="https://openresty.org/#about">About</a></li>
-            <li><a href="http://openresty.org/#ContactUs">Contact</a></li>
+            <li><a href="https://openresty.org/">主页</a></li>
+            <li><a href="https://openresty.org/#about">关于</a></li>
+            <li><a href="http://openresty.org/#ContactUs">联系方式</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -64,18 +63,17 @@
         <form class="panel panel-default" role="form" action="post" method="post" data-toggle="validator">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    <span class="fa fa-question-circle"></span>   User Survey</h3>
+                    <span class="fa fa-question-circle"></span>   用户调查</h3>
             </div>
             <div class="panel-body two-col">
 
                 <div class="row">
                     <div class="col-md-12">
                         <p>
-                        The OpenResty team will keep the submitted user information confidential unless being
-                        explicitly told otherwise.
+                        OpenResty 团队会对用户提交的信息严格保密，除非用户明确允许我们公开其中的某些信息。
                         </p>
-                        <p>By "OpenResty" we mean either the OpenResty bundle or just core OpenResty components like the <a href="https://github.com/openresty/lua-nginx-module">ngx_lua module</a>.</p>
-                        <p>Fields marked by <span class="required-field">*</span> are required.</p>
+                        <p>当我们说“OpenResty”的时候，我们既指 OpenResty 软件包，也指 OpenResty 的核心组件，例如 <a href="https://github.com/openresty/lua-nginx-module">ngx_lua 模块</a>.</p>
+                        <p>标记有 <span class="required-field">*</span> 的表单字段为必填项。</p>
                     </div>
                 </div>
 
@@ -88,23 +86,23 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="first_name" class="text-label">First Name</label>
-                                <input name="first_name"
-                                       id="first_name"
-                                       placeholder="First Name"
-                                       type="text"
-                                       value="" required pattern="\S+">                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="well well-sm">
-                            <div class="input-sm form-group">
-                                <label for="last_name" class="text-label">Last Name</label>
+                                <label for="last_name" class="text-label">姓</label>
                                 <input name="last_name"
                                        id="last_name"
-                                       placeholder="Last Name"
+                                       placeholder="姓"
+                                       type="text"
+                                       value="" required pattern="\S+">                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="well well-sm">
+                            <div class="input-sm form-group">
+                                <label for="first_name" class="text-label">名</label>
+                                <input name="first_name"
+                                       id="first_name"
+                                       placeholder="名"
                                        type="text"
                                        value="" required pattern="\S+">                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
                             </div>
@@ -118,10 +116,10 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="country" class="text-label">Country/Region</label>
+                                <label for="country" class="text-label">国家/地区</label>
                                 <input name="country"
                                        id="country"
-                                       placeholder="Country/Region"
+                                       placeholder="国家/地区"
                                        type="text"
                                        value="" required>                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
                             </div>
@@ -131,10 +129,10 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="city" class="text-label">City</label>
+                                <label for="city" class="text-label">城市</label>
                                 <input name="city"
                                        id="city"
-                                       placeholder="City"
+                                       placeholder="城市"
                                        type="text"
                                        value="" required>                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
                             </div>
@@ -148,10 +146,10 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="email" class="text-label">Email</label>
+                                <label for="email" class="text-label">电子信箱</label>
                                 <input name="email"
                                        id="email"
-                                       placeholder="Email"
+                                       placeholder="电子信箱"
                                        type="email"
                                        value="" required>                                <span class="required-field">*</span>                                <div class="help-block with-errors"></div>
                             </div>
@@ -161,10 +159,10 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="homepage" class="text-label">Home Page</label>
+                                <label for="homepage" class="text-label">个人主页</label>
                                 <input name="homepage"
                                        id="homepage"
-                                       placeholder="Home Page"
+                                       placeholder="个人主页"
                                        type="url"
                                        value="">                                <div class="help-block with-errors"></div>
                             </div>
@@ -191,10 +189,10 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="twitter" class="text-label">Twitter ID</label>
-                                <input name="twitter"
-                                       id="twitter"
-                                       placeholder="Twitter ID"
+                                <label for="weibo" class="text-label">新浪微博 ID</label>
+                                <input name="weibo"
+                                       id="weibo"
+                                       placeholder="新浪微博 ID"
                                        type="text"
                                        value="" pattern="\w+">                                <div class="help-block with-errors"></div>
                             </div>
@@ -208,10 +206,10 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="company" class="text-label">Company</label>
+                                <label for="company" class="text-label">公司名称</label>
                                 <input name="company"
                                        id="company"
-                                       placeholder="Company"
+                                       placeholder="公司名称"
                                        type="text"
                                        value="">                                <div class="help-block with-errors"></div>
                             </div>
@@ -221,10 +219,10 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="company_url" class="text-label">Company URL</label>
+                                <label for="company_url" class="text-label">公司主页</label>
                                 <input name="company_url"
                                        id="company_url"
-                                       placeholder="Company URL"
+                                       placeholder="公司主页"
                                        type="url"
                                        value="">                                <div class="help-block with-errors"></div>
                             </div>
@@ -238,10 +236,10 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="job_title" class="text-label">Job Title</label>
+                                <label for="job_title" class="text-label">工作职位</label>
                                 <input name="job_title"
                                        id="job_title"
-                                       placeholder="Job Title"
+                                       placeholder="工作职位"
                                        type="text"
                                        value="">                                <div class="help-block with-errors"></div>
                             </div>
@@ -251,10 +249,10 @@
                     <div class="col-md-6">
                         <div class="well well-sm">
                             <div class="input-sm form-group">
-                                <label for="department" class="text-label">Department</label>
+                                <label for="department" class="text-label">公司部门</label>
                                 <input name="department"
                                        id="department"
-                                       placeholder="Department"
+                                       placeholder="公司部门"
                                        type="text"
                                        value="">                                <div class="help-block with-errors"></div>
                             </div>
@@ -266,8 +264,8 @@
                     <div class="col-md-12">
                         <div class="well well-sm">
                             <div class="input-sm">
-                                <label for="logo" class="text-label-lg">URL to your company's logo image</label>
-                                <input placeholder="URL to your company's logo image" name="logo"
+                                <label for="logo" class="text-label-lg">公司徽标图片的 URL</label>
+                                <input placeholder="公司徽标图片的 URL" name="logo"
                                        id="logo"
                                        type="url" value=""
                                        class="text-box-lg">
@@ -279,8 +277,8 @@
                     <div class="col-md-12">
                         <div class="well well-sm">
                             <div class="input-sm">
-                                <label for="typical_uses" class="text-label-lg">Typical use cases of OpenResty in your company</label>
-                                <input placeholder="Typical use cases of OpenResty in your company" name="typical_uses"
+                                <label for="typical_uses" class="text-label-lg">OpenResty 在公司的典型应用场景</label>
+                                <input placeholder="OpenResty 在公司的典型应用场景" name="typical_uses"
                                        id="typical_uses"
                                        type="text" value=""
                                        class="text-box-lg">
@@ -292,8 +290,8 @@
                     <div class="col-md-12">
                         <div class="well well-sm">
                             <div class="input-sm">
-                                <label for="dev_count" class="text-label-lg">Number of developers doing OpenResty</label>
-                                <input placeholder="Number of developers doing OpenResty" name="dev_count"
+                                <label for="dev_count" class="text-label-lg">公司使用 OpenResty 的开发者人数</label>
+                                <input placeholder="公司使用 OpenResty 的开发者人数" name="dev_count"
                                        id="dev_count"
                                        type="number" value=""
                                        class="text-box-md">
@@ -305,12 +303,12 @@
                     <div class="col-md-12">
                         <div class="well well-sm">
                             <div class="input-sm">
-                                <label for="traffic" class="text-label-lg">Approximate traffic through OpenResty</label>
-                                <input placeholder="Approximate traffic through OpenResty" name="traffic"
+                                <label for="traffic" class="text-label-lg">公司使用 OpenResty 服务的大致流量</label>
+                                <input placeholder="公司使用 OpenResty 服务的大致流量" name="traffic"
                                        id="traffic"
                                        type="text" value=""
                                        class="text-box-md">
-                                <span>(per second)</span>                            </div>
+                                <span>（每秒）</span>                            </div>
                         </div>
                     </div>
                 </div>
@@ -321,7 +319,7 @@
                             <div class="checkbox">
                                 <label for="prod">
                                     <input name="prod" id="prod" type="checkbox" value="1">
-                                    Using OpenResty in production                                </label>
+                                    正在生产上使用 OpenResty                                </label>
                             </div>
                         </div>
                     </div>
@@ -330,7 +328,7 @@
                             <div class="checkbox">
                                 <label for="fun">
                                     <input name="fun" id="fun" type="checkbox" value="1">
-                                    Using OpenResty for fun                                </label>
+                                    为了兴趣使用 OpenResty                                </label>
                             </div>
                         </div>
                     </div>
@@ -342,7 +340,7 @@
                             <div class="checkbox">
                                 <label for="extern">
                                     <input name="extern" id="extern" type="checkbox" value="1">
-                                    Using OpenResty in your company's external services                                </label>
+                                    在公司的对外服务中使用 OpenResty                                </label>
                             </div>
                         </div>
                     </div>
@@ -351,7 +349,7 @@
                             <div class="checkbox">
                                 <label for="intern">
                                     <input name="intern" id="intern" type="checkbox" value="1">
-                                    Using OpenResty in your company's internal tools                                </label>
+                                    在公司的内部工具中使用 OpenResty                                </label>
                             </div>
                         </div>
                     </div>
@@ -363,7 +361,7 @@
                             <div class="checkbox">
                                 <label for="show_logo">
                                     <input name="show_logo" id="show_logo" type="checkbox" value="1">
-                                    Want to show your company's logo on the "Who are using OpenResty" page of the <a href="https://openresty.org">OpenResty official site</a>
+                                    希望在 <a href="https://openresty.org">OpenResty 官网</a>的“谁在使用 OpenResty”页面上展示公司的徽标
                                 </label>
                             </div>
                         </div>
@@ -375,7 +373,7 @@
                             <div class="checkbox">
                                 <label for="subscribed">
                                     <input name="subscribed" id="subscribed" type="checkbox" value="1">
-                                    Already subscribed to the <a href="https://groups.google.com/group/openresty-en/">openresty-en mailing list</a>
+                                    已经订阅了 <a href="https://groups.google.com/group/openresty/">openresty 邮件列表</a>
                                 </label>
                             </div>
                         </div>
@@ -387,7 +385,7 @@
                             <div class="checkbox">
                                 <label for="will_tell">
                                     <input name="will_tell" id="will_tell" type="checkbox" value="1">
-                                    Will tell other people about OpenResty
+                                    乐意把 OpenResty 介绍给其他人
                                 </label>
                             </div>
                         </div>
@@ -399,7 +397,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-success btn-sm btn-block">
-                            <span class="fa fa-send"></span>Submit</button>
+                            <span class="fa fa-send"></span>提交表单</button>
                     </div>
                     <!--
                     <div class="col-md-6">

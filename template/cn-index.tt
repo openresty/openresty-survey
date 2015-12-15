@@ -1,36 +1,37 @@
+<!DOCTYPE html>
 [%- DEFAULT
         form = [
             {
-                name = "first_name",
-                label = "First Name",
+                name = "last_name",
+                label = "姓",
                 required = 1,
                 pattern = "\\S+"
             },
             {
-                name = "last_name",
-                label = "Last Name",
+                name = "first_name",
+                label = "名",
                 required = 1,
                 pattern = "\\S+"
             },
             {
                 name = "country",
-                label = "Country/Region",
+                label = "国家/地区",
                 required = 1,
             },
             {
                 name = "city",
-                label = "City",
+                label = "城市",
                 required = 1,
             },
             {
                 name = "email",
-                label = "Email",
+                label = "电子信箱",
                 required = 1,
                 type = "email",
             },
             {
                 name = "homepage",
-                label = "Home Page",
+                label = "个人主页",
                 type = "url",
             }
             {
@@ -39,96 +40,95 @@
                 pattern = "\\w+"
             },
             {
-                name = "twitter",
-                label = "Twitter ID",
+                name = "weibo",
+                label = "新浪微博 ID",
                 pattern = "\\w+"
             },
             {
                 name = "company",
-                label = "Company",
+                label = "公司名称",
             },
             {
                 name = "company_url",
-                label = "Company URL",
+                label = "公司主页",
                 type = "url",
             },
             {
                 name = "job_title",
-                label = "Job Title",
+                label = "工作职位",
             },
             {
                 name = "department",
-                label = "Department",
+                label = "公司部门",
             },
             {
                 name = "logo",
-                label = "URL to your company's logo image",
+                label = "公司徽标图片的 URL",
                 single = 1,
                 type = "url",
                 class = "text-box-lg",
             },
             {
                 name = "typical_uses",
-                label = "Typical use cases of OpenResty in your company",
+                label = "OpenResty 在公司的典型应用场景",
                 single = 1,
                 class = "text-box-lg",
             },
             {
                 name = "dev_count",
-                label = "Number of developers doing OpenResty",
+                label = "公司使用 OpenResty 的开发者人数",
                 single = 1,
                 class = "text-box-md",
                 type = "number",
             },
             {
                 name = "traffic",
-                label = "Approximate traffic through OpenResty",
+                label = "公司使用 OpenResty 服务的大致流量",
                 single = 1,
                 class = "text-box-md",
-                suffix = "(per second)",
+                suffix = "（每秒）",
             },
             {
                 name = "prod",
-                label = "Using OpenResty in production",
+                label = "正在生产上使用 OpenResty",
                 checkbox = 1,
             },
             {
                 name = "fun",
-                label = "Using OpenResty for fun",
+                label = "为了兴趣使用 OpenResty",
                 checkbox = 1,
             },
             {
                 name = "extern",
-                label = "Using OpenResty in your company's external services",
+                label = "在公司的对外服务中使用 OpenResty",
                 checkbox = 1,
             },
             {
                 name = "intern",
-                label = "Using OpenResty in your company's internal tools",
+                label = "在公司的内部工具中使用 OpenResty",
                 checkbox = 1,
             },
             {
                 name = "show_logo",
-                label = "Want to show your company's logo on the \"Who are using OpenResty\" page of the <a href=\"https://openresty.org\">OpenResty official site</a>",
+                label = "希望在 <a href=\"https://openresty.org\">OpenResty 官网</a>的“谁在使用 OpenResty”页面上展示公司的徽标",
                 checkbox = 1,
                 single = 1,
             },
             {
                 name = "subscribed",
-                label = 'Already subscribed to the <a href="https://groups.google.com/group/openresty-en/">openresty-en mailing list</a>',
+                label = '已经订阅了 <a href="https://groups.google.com/group/openresty/">openresty 邮件列表</a>',
                 checkbox = 1,
                 single = 1,
             },
             {
                 name = "will_tell",
-                label = "Will tell other people about OpenResty",
+                label = "乐意把 OpenResty 介绍给其他人",
                 checkbox = 1,
                 single = 1,
             },
         ]
-    note = "This file was automatically generated from template/index.tt."
+    note = "This file was automatically generated from template/cn-index.tt."
 -%]
-<!DOCTYPE html>
 <html lang="en">
   <!-- [% note %] -->
   <head>
@@ -136,8 +136,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="OpenResty User Survey">
-    <meta name="author" content="Yichun Zhang (agentzh)">
+    <meta name="description" content="OpenResty 用户调查">
+    <meta name="author" content="章亦春 (agentzh)">
     <link rel="icon" href="https://openresty.org/favicon.ico">
 
     <title>OpenResty User Survey</title>
@@ -150,7 +150,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/home.css" rel="stylesheet">
+    <link href="css/cn-home.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -174,13 +174,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">OpenResty User Survey</a>
+          <a class="navbar-brand" href="#">OpenResty 用户调查</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="https://openresty.org/">Home</a></li>
-            <li><a href="https://openresty.org/#about">About</a></li>
-            <li><a href="http://openresty.org/#ContactUs">Contact</a></li>
+            <li><a href="https://openresty.org/">主页</a></li>
+            <li><a href="https://openresty.org/#about">关于</a></li>
+            <li><a href="http://openresty.org/#ContactUs">联系方式</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -194,18 +194,17 @@
         <form class="panel panel-default" role="form" action="post" method="post" data-toggle="validator">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    <span class="fa fa-question-circle"></span>   User Survey</h3>
+                    <span class="fa fa-question-circle"></span>   用户调查</h3>
             </div>
             <div class="panel-body two-col">
 
                 <div class="row">
                     <div class="col-md-12">
                         <p>
-                        The OpenResty team will keep the submitted user information confidential unless being
-                        explicitly told otherwise.
+                        OpenResty 团队会对用户提交的信息严格保密，除非用户明确允许我们公开其中的某些信息。
                         </p>
-                        <p>By "OpenResty" we mean either the OpenResty bundle or just core OpenResty components like the <a href="https://github.com/openresty/lua-nginx-module">ngx_lua module</a>.</p>
-                        <p>Fields marked by <span class="required-field">*</span> are required.</p>
+                        <p>当我们说“OpenResty”的时候，我们既指 OpenResty 软件包，也指 OpenResty 的核心组件，例如 <a href="https://github.com/openresty/lua-nginx-module">ngx_lua 模块</a>.</p>
+                        <p>标记有 <span class="required-field">*</span> 的表单字段为必填项。</p>
                     </div>
                 </div>
 
@@ -330,7 +329,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-success btn-sm btn-block">
-                            <span class="fa fa-send"></span>Submit</button>
+                            <span class="fa fa-send"></span>提交表单</button>
                     </div>
                     <!--
                     <div class="col-md-6">

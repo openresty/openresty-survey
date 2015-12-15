@@ -8,6 +8,7 @@ create table user_survey (
     homepage varchar(2038),
     github varchar(40),
     twitter varchar(40),
+    weibo varchar(40),
     company varchar(50),
     company_url varchar(2038),
     job_title varchar(30),

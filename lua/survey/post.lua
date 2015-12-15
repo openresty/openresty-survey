@@ -24,6 +24,7 @@ local fields = {
     "homepage",
     "github",
     "twitter",
+    "weibo",
     "company",
     "company_url",
     "job_title",
@@ -82,7 +83,7 @@ end
 function _M.go()
     -- warn("header: ", ngx.req.raw_header())
     read_body()
-    local args = get_post_args()
+    local args = get_post_args(#fields)
 
     -- warn("body: ", ngx.req.get_body_data())
     -- warn("args: ", cjson.encode(args))
