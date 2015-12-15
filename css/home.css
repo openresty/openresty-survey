@@ -25,22 +25,24 @@
     margin-bottom: 0;
 }
 
-.text-box-md {
-    width: 20em;
-}
+@media screen and (min-width: 480px) {
+    .text-box-md {
+        width: 20em;
+    }
 
-.text-box-lg {
-    width: 33em;
-}
+    .text-box-lg {
+        width: 33em;
+    }
 
-.text-label {
-    display: inline-block;
-    width: 8em;
-}
+    .text-label {
+        display: inline-block;
+        width: 8em;
+    }
 
-.text-label-lg {
-    display: inline-block;
-    width: 24em;
+    .text-label-lg {
+        display: inline-block;
+        width: 24em;
+    }
 }
 
 .success-icon {
