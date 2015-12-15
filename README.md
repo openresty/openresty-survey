@@ -12,6 +12,16 @@ Table of Contents
 * [Author](#author)
 * [Copyright and License](#copyright-and-license)
 
+Description
+===========
+
+This is the source code for the OpenResty User Survey app built upon OpenResty.
+
+See the sites alive below:
+
+* https://openresty.org/survey/  (English version)
+* https://openresty.org/survey/cn  (Chinese version)
+
 Initialize the MySQL database
 =============================
 
