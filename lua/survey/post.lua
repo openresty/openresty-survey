@@ -108,7 +108,8 @@ function _M.go()
     db:set_timeout(1000) -- 1 sec
 
     if not ok then
-        return fail("failed to connect to mysql: ", err, ": ", errno, " ", sqlstate)
+        return fail("failed to connect to mysql: ", err, ": ", errno, " ",
+                    sqlstate)
     end
 
     args.client_addr = ngx.var.remote_addr
