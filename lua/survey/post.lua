@@ -4,14 +4,19 @@ local string = require "string"
 local cjson = require "cjson"
 local table_new = require "table.new"
 local table = require "table"
+local resty_mysql = require "resty.mysql"
 
 local table_concat = table.concat
 local read_body = ngx.req.read_body
+local set_method = ngx.req.set_method
 local get_post_args = ngx.req.get_post_args
 local quote_sql_str = ngx.quote_sql_str
-local resty_mysql = require "resty.mysql"
 local str_fmt = string.format
+local ipairs = ipairs
+local HTTP_GET = ngx.HTTP_GET
 local ngx_time = ngx.time
+local ngx_exec = ngx.exec
+local ngx_var = ngx.var
 
 local _M = {}
 
@@ -71,9 +76,9 @@ end
 
 local function fail(...)
     ngx.log(ngx.ERR, ...)
-    ngx.req.set_method(ngx.HTTP_GET)
+    set_method(HTTP_GET)
     ngx.status = 500
-    ngx.exec("/survey/fail.html")
+    ngx_exec("/survey/fail.html")
 end
 
 local function warn(...)
@@ -96,6 +101,8 @@ function _M.go()
         return fail("failed to create mysql instance: ", err)
     end
 
+    db:set_timeout(1000) -- 1 sec
+
     local ok, err, errno, sqlstate = db:connect{
         host = "127.0.0.1",
         port = 3306,
@@ -105,14 +112,12 @@ function _M.go()
         max_packet_size = 1024
     }
 
-    db:set_timeout(1000) -- 1 sec
-
     if not ok then
         return fail("failed to connect to mysql: ", err, ": ", errno, " ",
                     sqlstate)
     end
 
-    args.client_addr = ngx.var.remote_addr
+    args.client_addr = ngx_var.remote_addr
 
     local value_list = build_value_list(args)
 
@@ -130,8 +135,8 @@ function _M.go()
         return fail("mysql: failed to set keepalive: ", err)
     end
 
-    ngx.req.set_method(ngx.HTTP_GET)
-    return ngx.exec("/survey/success.html")
+    set_method(HTTP_GET)
+    return ngx_exec("/survey/success.html")
 end
 
 return _M
