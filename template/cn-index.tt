@@ -37,12 +37,12 @@
             {
                 name = "github",
                 label = "GitHub ID",
-                pattern = "\\w+"
+                pattern = "[-\\w]+"
             },
             {
                 name = "weibo",
                 label = "新浪微博 ID",
-                pattern = "\\w+"
+                pattern = "\\S+"
             },
             {
                 name = "company",

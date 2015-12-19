@@ -36,12 +36,12 @@
             {
                 name = "github",
                 label = "GitHub ID",
-                pattern = "\\w+"
+                pattern = "[-\\w]+"
             },
             {
                 name = "twitter",
                 label = "Twitter ID",
-                pattern = "\\w+"
+                pattern = "[-\\w]+"
             },
             {
                 name = "company",
@@ -201,7 +201,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p>
-                        The OpenResty team will keep the submitted user information confidential unless being
+                        The OpenResty team will keep the submitted user information strictly confidential unless being
                         explicitly told otherwise.
                         </p>
                         <p>By "OpenResty" we mean either the OpenResty bundle or just core OpenResty components like the <a href="https://github.com/openresty/lua-nginx-module">ngx_lua module</a>.</p>
